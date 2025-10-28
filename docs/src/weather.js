@@ -82,8 +82,7 @@ async function fetchWeather(city) {
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
         <a href="index.html" class="btn" id="homeBtn">🏠 На главную</a>
-      </div>
-    `;
+      </div>`;
 
     // кнопка обновить
     document.getElementById('refreshBtn').addEventListener('click', () => {
