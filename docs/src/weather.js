@@ -81,7 +81,7 @@ async function fetchWeather(city) {
       </details>
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="index.html">🏠На главную</a>
+        <a href="./index.html"class="btn">🏠На главную</a>
       </div>
     `;
 
