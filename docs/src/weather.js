@@ -85,13 +85,21 @@ async function fetchWeather(city) {
       </div>
     `;
 
-    document.getElementById('refreshBtn').addEventListener('click', () => {
-      fetchWeather(lastCity);
-    });
     document.getElementById('homeBtn').addEventListener('click', (e) => {
       e.preventDefault();
       window.location.href = 'index.html';
     });
+    document.getElementById('refreshBtn').addEventListener('click', () => {
+      fetchWeather(lastCity);
+    });
+    
+    const homeBtn = document.getElementById('homeBtn');
+    if (homeBtn) {
+      homeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.assign('https://wraxau.github.io/web-laba2/index.html');
+      });
+    }
     
 
   } catch (error) {
