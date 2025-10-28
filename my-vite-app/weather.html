@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤️ Погода</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/weather.css">
+</head>
+<body>
+  <header>
+    <h1>🌤️ Погода в любом городе</h1>
+    <p class="subtitle">Введите название города, чтобы узнать текущую погоду</p>
+  </header>
+
+  <main>
+    <form id="cityForm" class="search-form">
+      <input type="text" id="cityInput" placeholder="Например: Moscow, Paris, Tokyo" required />
+      <button type="submit">Показать</button>
+    </form>
+
+    <div id="weatherResult" class="result-container"></div>
+  </main>
+
+  <script type="module" src="/src/weather.js"></script>
+</body>
+</html>
