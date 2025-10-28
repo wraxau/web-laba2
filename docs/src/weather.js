@@ -85,22 +85,19 @@ async function fetchWeather(city) {
       </div>
     `;
 
-    document.getElementById('homeBtn').addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.href = 'index.html';
-    });
+    // кнопка обновить
     document.getElementById('refreshBtn').addEventListener('click', () => {
       fetchWeather(lastCity);
     });
-    
+
+    // кнопка "на главную"
     const homeBtn = document.getElementById('homeBtn');
     if (homeBtn) {
       homeBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.assign('https://wraxau.github.io/web-laba2/index.html');
+        window.location.href = 'https://wraxau.github.io/web-laba2/index.html';
       });
     }
-    
 
   } catch (error) {
     console.error('Ошибка:', error);
