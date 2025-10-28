@@ -57,33 +57,44 @@ async function fetchWeather(city) {
     else weatherIcon = '☀️';
 
     // Отображение результата
-    resultDiv.innerHTML = `
-      <div class="weather-header">
-        <span class="weather-icon-large">${weatherIcon}</span>
-        <h2>${display_name.split(',')[0]}</h2>
-      </div>
-      <div class="result-item">
-        <label>🌡️ Температура:</label>
-        <span>${temperature}°C</span>
-      </div>
-      <div class="result-item">
-        <label>💨 Ветер:</label>
-        <span>${windspeed} км/ч</span>
-      </div>
-      <div class="result-item">
-        <label>📅 Запрос:</label>
-        <span>${now}</span>
-      </div>
-      <details class="tech-details">
-        <summary>🌍 Техническая информация</summary>
-        <p><strong>Координаты:</strong> ${lat}, ${lon}</p>
-        <p><strong>API:</strong> Open-Meteo + Nominatim (OpenStreetMap)</p>
-      </details>
-      <div class="action-buttons">
-        <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="./index.html" class="btn">🏠 На главную</a>
-      </div>
-    `;
+    // Отображение результата
+resultDiv.innerHTML = `
+  <div class="weather-header">
+    <span class="weather-icon-large">${weatherIcon}</span>
+    <h2>${display_name.split(',')[0]}</h2>
+  </div>
+  <div class="result-item">
+    <label>🌡️ Температура:</label>
+    <span>${temperature}°C</span>
+  </div>
+  <div class="result-item">
+    <label>💨 Ветер:</label>
+    <span>${windspeed} км/ч</span>
+  </div>
+  <div class="result-item">
+    <label>📅 Запрос:</label>
+    <span>${now}</span>
+  </div>
+  <details class="tech-details">
+    <summary>🌍 Техническая информация</summary>
+    <p><strong>Координаты:</strong> ${lat}, ${lon}</p>
+    <p><strong>API:</strong> Open-Meteo + Nominatim (OpenStreetMap)</p>
+  </details>
+  <div class="action-buttons">
+    <button id="refreshBtn" class="btn">🔄 Обновить</button>
+    <button id="homeBtn" class="btn">🏠 На главную</button>
+  </div>
+`;
+
+// Навешиваем обработчики после вставки HTML
+document.getElementById('refreshBtn').addEventListener('click', () => {
+  fetchWeather(lastCity);
+});
+
+document.getElementById('homeBtn').addEventListener('click', () => {
+  window.location.href = './index.html'; // Важно — без ведущего слэша!
+});
+
 
     document.getElementById('refreshBtn').addEventListener('click', () => {
       fetchWeather(lastCity);
