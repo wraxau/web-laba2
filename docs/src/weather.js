@@ -81,13 +81,18 @@ async function fetchWeather(city) {
       </details>
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="/web-laba2/index.html" class="btn">🏠 На главную</a>
+        <a href="index.html" class="btn" id="homeBtn">🏠 На главную</a>
       </div>
     `;
 
     document.getElementById('refreshBtn').addEventListener('click', () => {
       fetchWeather(lastCity);
     });
+    document.getElementById('homeBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'index.html';
+    });
+    
 
   } catch (error) {
     console.error('Ошибка:', error);
