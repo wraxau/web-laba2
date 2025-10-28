@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/web-laba2/', 
+  base: './', 
 });
