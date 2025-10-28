@@ -33,7 +33,7 @@
   }
   
   .search-form button:hover {
-    background: #2980b9;
+    background: #b92941;
   }
   
   .result-container {
@@ -69,7 +69,7 @@
   
   .result-item span {
     font-weight: 600;
-    color: #2c3e50;
+    color: #502c2d;
   }
   
   .back-link {
@@ -106,7 +106,7 @@
   .tech-details summary {
     cursor: pointer;
     font-weight: 600;
-    color: #3498db;
+    color: #db3450;
   }
   
   .action-buttons {
