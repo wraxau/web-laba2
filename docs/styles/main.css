@@ -93,10 +93,10 @@
   }
   
   .btn:hover {
-    background: #2980b9;
+    background: #b92929;
   }
   
-  .weather-icon { color: #3498db; }
+  .weather-icon { color: #db344a; }
   .movies-icon { color: #e74c3c; }
   .currency-icon { color: #2ecc71; }
   .books-icon { color: #9b59b6; }
