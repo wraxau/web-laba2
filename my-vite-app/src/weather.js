@@ -24,7 +24,7 @@ async function fetchWeather(city) {
     const geoData = await geoResponse.json();
 
     if (!geoData || geoData.length === 0) {
-      resultDiv.innerHTML = '<p>❌ Город не найден. Попробуйте другой.</p>';
+      resultDiv.innerHTML = '<p>Город не найден. Попробуйте другой.</p>';
       return;
     }
 
@@ -37,7 +37,7 @@ async function fetchWeather(city) {
     const weatherData = await weatherResponse.json();
 
     if (!weatherData.current_weather) {
-      resultDiv.innerHTML = '<p>⚠️ Не удалось получить данные о погоде.</p>';
+      resultDiv.innerHTML = '<p>Не удалось получить данные о погоде.</p>';
       return;
     }
 
@@ -87,13 +87,12 @@ async function fetchWeather(city) {
       </div>
     `;
 
-    // Обработчик кнопки "Обновить"
     document.getElementById('refreshBtn').addEventListener('click', () => {
       fetchWeather(lastCity);
     });
 
   } catch (error) {
     console.error('Ошибка:', error);
-    resultDiv.innerHTML = '<p>❌ Произошла ошибка. Проверьте подключение и попробуйте снова.</p>';
+    resultDiv.innerHTML = '<p>Произошла ошибка. Проверьте подключение и попробуйте снова.</p>';
   }
 }

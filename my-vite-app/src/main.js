@@ -13,9 +13,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         weather: 'weather.html',
-        // добавь сюда другие страницы, если будут
       },
     },
   },
-  base: '/web-2/', // ⚠️ замени на имя твоего репозитория!
+  base: '/web-laba2/', 
 });
