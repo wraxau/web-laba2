@@ -46,7 +46,7 @@ async function fetchWeather(city) {
       month: 'long',
       day: 'numeric',
       hour: '2-digit',
-      minute: '2-digit',
+      minute: '2-digit'
     });
 
     // Иконка по температуре
@@ -81,16 +81,25 @@ async function fetchWeather(city) {
       </details>
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="/web-laba2/index.html" class="btn">🏠 На главную</a>
-      </div>
-    `;
+        <a href="index.html" class="btn" id="homeBtn">🏠 На главную</a>
+      </div>`;
 
+    // кнопка обновить
     document.getElementById('refreshBtn').addEventListener('click', () => {
       fetchWeather(lastCity);
     });
+
+    // кнопка "на главную"
+    const homeBtn = document.getElementById('homeBtn');
+    if (homeBtn) {
+      homeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'https://wraxau.github.io/web-laba2/index.html';
+      });
+    }
+
   } catch (error) {
     console.error('Ошибка:', error);
-    resultDiv.innerHTML =
-      '<p>Произошла ошибка. Проверьте подключение и попробуйте снова.</p>';
+    resultDiv.innerHTML = '<p>Произошла ошибка. Проверьте подключение и попробуйте снова.</p>';
   }
 }
