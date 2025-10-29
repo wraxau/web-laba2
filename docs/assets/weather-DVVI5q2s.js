@@ -22,6 +22,5 @@
       </details>
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="/" class="btn btn-secondary">🏠 На главную</a>
       </div>
     `,document.getElementById("refreshBtn").addEventListener("click",()=>{u(d)})}catch(a){console.error("Ошибка:",a),t.innerHTML="<p>Произошла ошибка. Проверьте подключение и попробуйте снова.</p>"}}
