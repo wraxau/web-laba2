@@ -1,13 +1,16 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/web-laba2/',
+  root: 'docs', 
+  base: '/web-laba2/', 
   build: {
+    outDir: '../dist', 
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'index.html',
-        weather: 'weather.html'
-      }
-    }
-  }
+        main: 'docs/index.html',
+        weather: 'docs/weather.html',
+      },
+    },
+  },
 });

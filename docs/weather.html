@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <base href="/web-laba2/">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌤️ Погода</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/weather.css">
-  <script type="module" crossorigin src="assets/weather-DVVI5q2s.js"></script>
-</head>
-<body>
-  <header>
-    <h1>🌤️ Погода в любом городе</h1>
-    <p class="subtitle">Введите название города, чтобы узнать текущую погоду</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌤️ Погода</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/weather.css" />
+    <script type="module" src="./weather.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>🌤️ Погода в любом городе</h1>
+      <p class="subtitle">Введите название города, чтобы узнать текущую погоду</p>
+    </header>
 
-  <main>
-    <form id="cityForm" class="search-form">
-      <input type="text" id="cityInput" placeholder="Например: Moscow, Paris, Tokyo" required />
-      <button type="submit">Показать</button>
-    </form>
+    <main>
+      <form id="cityForm" class="search-form">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Например: Moscow, Paris, Tokyo"
+          required
+        />
+        <button type="submit">Показать</button>
+      </form>
 
-    <div id="weatherResult" class="result-container"></div>
-  </main>
-</body>
+      <div id="weatherResult" class="result-container"></div>
+    </main>
+  </body>
 </html>
