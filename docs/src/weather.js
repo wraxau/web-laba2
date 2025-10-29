@@ -81,8 +81,9 @@ async function fetchWeather(city) {
       </details>
       <div class="action-buttons">
         <button id="refreshBtn" class="btn">🔄 Обновить</button>
-        <a href="index.html" class="btn" id="homeBtn">🏠 На главную</a>
+        <a href="./index.html" class="btn" id="homeBtn">🏠 На главную</a>
       </div>`;
+
 
     // кнопка обновить
     document.getElementById('refreshBtn').addEventListener('click', () => {
@@ -93,10 +94,12 @@ async function fetchWeather(city) {
     const homeBtn = document.getElementById('homeBtn');
     if (homeBtn) {
       homeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = 'https://wraxau.github.io/web-laba2/index.html';
-      });
-    }
+      e.preventDefault();
+      // Абсолютный путь к твоей главной на GitHub Pages
+      window.location.href = 'https://wraxau.github.io/web-laba2/';
+    });
+  }
+
 
   } catch (error) {
     console.error('Ошибка:', error);
