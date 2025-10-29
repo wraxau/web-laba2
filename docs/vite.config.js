@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        weather: 'weather.html'
+        weather: 'weather.html',
+        new: 'new.html',
       }
     }
   }
