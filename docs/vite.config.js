@@ -8,7 +8,7 @@ export default defineConfig({
         main: 'index.html',
         weather: 'weather.html',
         new: 'new.html',
-        books: 'books.html'
+        dogs: 'dogs.html'
       }
     }
   }
