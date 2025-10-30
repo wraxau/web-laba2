@@ -95,6 +95,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s;
     text-decoration: none; 
+    margin: 10px 0px;
   }
 .homeButton:hover {
     background: rgb(207, 231, 252);
