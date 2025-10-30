@@ -35,3 +35,6 @@
   .btn:hover {
     background: #c0392b;
   }
+  .action-buttons {
+    margin-top: 24px;
+  }
