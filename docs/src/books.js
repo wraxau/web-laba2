@@ -1,3 +1,4 @@
+// src/books.js
 document.getElementById('bookForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const query = document.getElementById('bookInput').value.trim();
@@ -6,11 +7,13 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
     resultDiv.classList.add('show');
   
     try {
-      const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=1`);
+      const proxy = 'https://corsproxy.io/?';
+      const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=1`;
+      const res = await fetch(proxy + encodeURIComponent(url));
       const data = await res.json();
   
       if (!data.docs || data.docs.length === 0) {
-        resultDiv.innerHTML = '<p>Книга не найдена. Попробуйте другое название.</p>';
+        resultDiv.innerHTML = '<p>Книга не найдена.</p>';
         return;
       }
   
@@ -41,6 +44,6 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
       `;
     } catch (error) {
       console.error('Ошибка:', error);
-      resultDiv.innerHTML = '<p>Произошла ошибка. Проверьте подключение.</p>';
+      resultDiv.innerHTML = '<p>Не удалось загрузить данные. Попробуйте позже.</p>';
     }
   });
