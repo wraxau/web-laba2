@@ -1,3 +1,6 @@
+import '../styles/main.css';
+import '../styles/dogs.css';
+
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('getDogBtn');
     const result = document.getElementById('dogResult');

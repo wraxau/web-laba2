@@ -1,3 +1,5 @@
+import '../styles/main.css';
+import '../styles/news.css';
 
 document.getElementById("newForm").addEventListener("submit", async (e) => {
     e.preventDefault();

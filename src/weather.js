@@ -1,3 +1,6 @@
+import '../styles/main.css';
+import '../styles/weather.css';
+
 let lastCity = '';
 
 document.getElementById('cityForm').addEventListener('submit', async (e) => {

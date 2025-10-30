@@ -1,3 +1,6 @@
+import '../styles/main.css';
+import '../styles/crypto.css';
+
 let isCryptoToCurrency = true;
 
 const amountInput = document.getElementById("amount");

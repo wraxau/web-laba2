@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <base href="/web-laba2/">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Новости про космос</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/news.css">
-  <script type="module" src="src/new.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новости про космос</title>
+    <script type="module" src="src/new.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Лучшие новости про космические объекты собраны здесь!</h1>
-        <p class="subtitle">Напишите название любого космического объекта на английском языке и получите новости о нём!</p>
+      <h1>Лучшие новости про космические объекты собраны здесь!</h1>
+      <p class="subtitle">
+        Напишите название любого космического объекта на английском языке и
+        получите новости о нём!
+      </p>
     </header>
     <main>
-        <form id="newForm" class="new-form">
-            <input type="text" id="newInput" placeholder="Например: Mars, Pluto, Sun" required/>
-            <button type="submit">Искать</button>
-        </form>
-        <div class="to-home">
-            <a href="index.html" class="homeButton" id="to-home-button">🏠 На главную</a>
-        </div>
-        <div id="newResult" class="result"></div>
+      <form id="newForm" class="new-form">
+        <input
+          type="text"
+          id="newInput"
+          placeholder="Например: Mars, Pluto, Sun"
+          required
+        />
+        <button type="submit">Искать</button>
+      </form>
+      <div class="to-home">
+        <a href="index.html" class="homeButton" id="to-home-button"
+          >🏠 На главную</a
+        >
+      </div>
+      <div id="newResult" class="result"></div>
     </main>
-</body>
+
+    <script type="module" src="/src/new.js"></script>
+  </body>
 </html>
