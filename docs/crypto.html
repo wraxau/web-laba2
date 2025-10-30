@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💱 Крипто-конвертер</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/crypto.css" />
+    <script type="module" src="src/crypto.js"></script>
+  </head>
+  <body class="crypto-page">
+    <header>
+      <h1><span class="emoji">💱</span> Крипто-конвертер</h1>
+    </header>
+
+    <main>
+      <form id="cryptoForm" class="converter-form">
+        <div class="input-group">
+          <input
+            type="number"
+            id="amount"
+            placeholder="Введите сумму"
+            value="1"
+            step="any"
+          />
+          <select id="cryptoSelect">
+            <option value="bitcoin">BTC</option>
+            <option value="ethereum">ETH</option>
+            <option value="tether">USDT</option>
+            <option value="solana">SOL</option>
+            <option value="dogecoin">DOGE</option>
+            <option value="the-open-network">TON</option>
+          </select>
+        </div>
+
+        <div class="swap-container">
+          <button type="button" id="swapBtn" title="Поменять местами поля">
+            ⇅
+          </button>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="result" readonly placeholder="Результат" />
+          <select id="currencySelect">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="rub">RUB</option>
+          </select>
+        </div>
+
+        <button type="submit">Конвертировать</button>
+      </form>
+
+      <div class="action-buttons">
+        <a href="index.html" class="btn">На главную</a>
+      </div>
+    </main>
+  </body>
+</html>
