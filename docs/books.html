@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 Книги</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/books.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Поиск книг</h1>
+    <p class="subtitle">Найди информацию о любимых книгах и авторах</p>
+  </header>
+
+  <main>
+    <form id="bookForm" class="search-form">
+      <input type="text" id="bookInput" placeholder="Например: 1984, Достоевский" required />
+      <button type="submit">Найти</button>
+    </form>
+
+    <div id="bookResult" class="result-container"></div>
+    <div class="action-buttons">
+      <a href="index.html" class="btn">🏠 На главную</a>
+    </div>
+  </main>
+  <script type="module" src="/src/books.js"></script>
+</body>
+</html>

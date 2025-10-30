@@ -1,0 +1,96 @@
+.search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  #bookInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  #bookInput:focus {
+    border-color: #db3447;
+  }
+  
+  .search-form button {
+    background: #db3450;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .search-form button:hover {
+    background: #b92941;
+  }
+  
+  .result-container {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+    display: none;
+  }
+  
+  .result-container.show {
+    display: block;
+  }
+  
+  .result-container h2 {
+    color: #502c31;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  
+  .result-item label {
+    color: #7f8c8d;
+  }
+  
+  .result-item span {
+    font-weight: 600;
+    color: #502c2d;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    background: #db3450;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+  
+  .btn:hover {
+    background: #b92941;
+  }
